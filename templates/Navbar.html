@@ -1,0 +1,52 @@
+<div class="wrapper">
+
+    <!-- Sidebar -->
+    <nav class="sidebar">
+
+        <!-- close sidebar menu -->
+        <div class="dismiss">
+            <i class="fas fa-arrow-left"></i>
+        </div>
+
+           <div class="to-top">
+            <a class="btn btn-primary btn-customized-3" btnrole="1" id="add-gallery" onclick="SaveGallery()" href="#" role="button">
+                <i class="fas fa-plus"></i> new gallery
+            </a>
+            <div style="display: none" class="form" id="gallery-form">
+                <form>
+                        <input class="form-control" id="gallery_name" placeholder="gallery name" type="text">
+                </form>
+            </div>
+        </div>
+
+        <ul id="galleries" class="list-unstyled menu-elements">
+        </ul>
+
+
+    </nav>
+    <!-- End sidebar -->
+
+    <!-- Dark overlay -->
+    <div class="overlay"></div>
+
+    <!-- Content -->
+    <div class="content">
+
+        <!-- open sidebar menu -->
+        <a class="btn btn-primary btn-customized open-menu" href="#" role="button">
+            <i class="fas fa-bars"></i> <span class="has_gallery" data-val="Galleries">Galleries</span>
+        </a>
+        <a class="btn btn-primary btn-customized " onclick="OpenFileManager()" href="#" role="button">
+            <i class="fas fa-bars"></i> <span class="has_gallery" data-val="Add images">Add images</span>
+        </a>
+        <!-- ... -->
+
+        <!-- here is the page's content (not shown here) -->
+
+        <!-- ... -->
+
+    </div>
+    <!-- End content -->
+
+</div>
+<!-- End wrapper -->

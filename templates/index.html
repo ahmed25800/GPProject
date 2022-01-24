@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User emotions</title>
+    <link rel="stylesheet" href="../static/Css/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/Css/fontawesome.min.css">
+    <link rel="stylesheet" href="../static/Css/fancy_box.css">
+    <link rel="stylesheet" href="../static/Css/gallery.css">
+    <link rel="stylesheet" href="../static/Css/wrapper.css">
+    <script src="../static/Js/jquery-3.6.0.min.js"></script>
+    <script src="../static/Js/bootstrap.min.js"></script>
+    <script>
+        $.ajaxSetup({
+            headers:{
+                'X-CSRFToken' : '{{ csrf_token }}'
+            }
+        });
+    </script>
+    <script src="../static/Js/app.js"></script>
+    <script src="../static/Js/fancy_box.js"></script>
+    <script src="../static/Js/gallery.js"></script>
+    <script src="../static/Js/Wrapper.js"></script>
+</head>
+<body>
+<form hidden method="POST" id="GalleryForm" enctype="multipart/form-data">
+    <input type="hidden" name="gallery_id" id="GalleryInput">
+    <input type="file"  name="images" onchange="ChangeFiles()" id="ImagesInput">
+</form>
+
+    <!-- Page Content -->
+    <div class="wrapper">
+        {% include 'Navbar.html' %}
+        {% include 'Modal.html' %}
+    </div>
+   <div class="container page-top">
+        <div id="gallery_images" class="row">
+       </div>
+    </div>
+    </body>
+</html>
